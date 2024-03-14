@@ -7,7 +7,7 @@ public class StudentSortingApplication {
 	public static void main(String[] args) throws IOException {
 		
 		StudentService.readStudentFile();
-		System.out.println();
+		StudentService.studentIntoFile();
 	}
 
 }

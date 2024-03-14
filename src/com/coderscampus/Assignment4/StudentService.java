@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
 public class StudentService {
 
 	static Student[] students = new Student[101];
@@ -25,15 +26,50 @@ public class StudentService {
 		return students;
 	}
 	
-	public void placeStudents() throws IOException {
-		for (Student student: students) {
-			if (student.getCourse().equals("COMPSCI 321")) {
-				try (BufferedWriter writer = new BufferedWriter(new FileWriter("course1.csv"));) {
-					
-				
-				}
-			}
-		}
+	
+	
+	public static void studentIntoFile() throws IOException {
+		BufferedWriter compSciFile = null;
+		BufferedWriter apMathFile = null;
+		BufferedWriter statFile = null;
 		
+		try {
+			 compSciFile = new BufferedWriter(new FileWriter("course1.csv"));
+			 apMathFile = new BufferedWriter(new FileWriter("course2.csv"));
+			 statFile = new BufferedWriter(new FileWriter("course3.csv"));
+			 
+			 for (Student student : students) {
+				 while (student != null) {
+				 if (student.getCourse().contains("COMPSCI")) {
+					 compSciFile.write(studentToString(student) + "\n");
+					 break;
+				 } else if (student.getCourse().contains("APMTH")) {
+					 apMathFile.write(studentToString(student) + "\n");
+					 break;
+				 } else if (student.getCourse().contains("STAT")) {
+					 statFile.write(studentToString(student) + "\n");
+					 break;
+				 } 
+			   }
+			 }	 
+		} finally {
+			if (compSciFile != null && apMathFile != null && statFile != null) 
+				compSciFile.close();
+				apMathFile.close();
+				statFile.close();
+		}
 	}
-}
+	
+
+	
+	public static String studentToString(Student student) {
+		return student.studentId + "," + student.studentName + "," + student.course + "," + student.grade;
+		}
+	
+	
+	
+	}
+	
+	
+
+
