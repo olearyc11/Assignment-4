@@ -65,14 +65,6 @@ public class StudentService {
 	public static String studentToString(Student student) {
 		return student.getStudentId() + "," + student.getStudentName() + "," + student.getCourse() + "," + student.getGrade();
 		}
-	
-	public static Integer studentGradeToInteger(String grade) {
-		Integer studentIntVal = Integer.parseInt(grade);
-		return studentIntVal;
-	}
-	
-	
-	
 	}
 	
 	

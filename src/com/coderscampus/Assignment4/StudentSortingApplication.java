@@ -13,13 +13,6 @@ public class StudentSortingApplication {
 		Arrays.sort(StudentService.students, new SortingService());
 		StudentService.studentIntoFile();
 		
-	
-		
-		
-		
-//		for (Student student : StudentService.students) {
-//			System.out.println(student.getStudentName());
-//		}
 	}
 
 }

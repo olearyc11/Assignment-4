@@ -19,10 +19,4 @@ public class SortingService implements Comparator<Student> {
 		Integer grade2 = Integer.parseInt(o2.getGrade());
 		return Integer.compare(grade2, grade1);
 	}
-
-	
-	
-	
-	
-
 }
