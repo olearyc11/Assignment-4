@@ -1,10 +1,11 @@
 package com.coderscampus.Assignment4;
 
 public class Student {
-	String studentId;
-	String studentName;
-	String course;
-	String grade;
+	private String studentId;
+	private String studentName;
+	private String course;
+	private String grade;
+	
 	
 	public Student(String studentId, String studentName, String course, String grade) { 
 		this.studentId = studentId;
@@ -44,5 +45,7 @@ public class Student {
 	public void setGrade(String grade) {
 		this.grade = grade;
 	}
-		
+	
+
+	
 }
