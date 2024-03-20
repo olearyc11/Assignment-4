@@ -11,6 +11,7 @@ public class StudentService {
 
 	static Student[] students = new Student[101];
 	
+
 	
 	public static Student[] readStudentFile() throws IOException {
 		try (BufferedReader reader = new BufferedReader(new FileReader("student-master-list.csv"));) {
@@ -37,6 +38,14 @@ public class StudentService {
 			 compSciFile = new BufferedWriter(new FileWriter("course1.csv"));
 			 apMathFile = new BufferedWriter(new FileWriter("course2.csv"));
 			 statFile = new BufferedWriter(new FileWriter("course3.csv"));
+			 BufferedReader reader = new BufferedReader(new FileReader("student-master-list.csv"));
+			 String header = reader.readLine();
+			 compSciFile.write(header + "\n");
+			 apMathFile.write(header + "\n");
+			 statFile.write(header + "\n");
+			 reader.close();
+			 
+			 
 			 
 			 for (Student student : students) {
 				 while (student != null) {
