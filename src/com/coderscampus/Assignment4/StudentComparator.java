@@ -2,7 +2,7 @@ package com.coderscampus.Assignment4;
 
 import java.util.Comparator;
 
-public class SortingService implements Comparator<Student> {
+public class StudentComparator implements Comparator<Student> {
 
 	@Override
 	public int compare(Student o1, Student o2) {
@@ -15,8 +15,6 @@ public class SortingService implements Comparator<Student> {
 	            return -1; 
 	        }
 		
-		Integer grade1 = Integer.parseInt(o1.getGrade());
-		Integer grade2 = Integer.parseInt(o2.getGrade());
-		return Integer.compare(grade2, grade1);
+		return Integer.compare(o2.getGrade(), o1.getGrade());
 	}
 }

@@ -1,24 +1,24 @@
 package com.coderscampus.Assignment4;
 
 public class Student {
-	private String studentId;
+	private int studentId;
 	private String studentName;
 	private String course;
-	private String grade;
+	private int grade;
 	
 	
-	public Student(String studentId, String studentName, String course, String grade) { 
+	public Student(int studentId, String studentName, String course, int grade) { 
 		this.studentId = studentId;
 		this.studentName = studentName;
 		this.course = course;
 		this.grade = grade;
 	}
 
-	public String getStudentId() {
+	public int getStudentId() {
 		return studentId;
 	}
 
-	public void setStudentId(String studentId) {
+	public void setStudentId(int studentId) {
 		this.studentId = studentId;
 	}
 
@@ -38,11 +38,11 @@ public class Student {
 		this.course = course;
 	}
 
-	public String getGrade() {
+	public int getGrade() {
 		return grade;
 	}
 
-	public void setGrade(String grade) {
+	public void setGrade(int grade) {
 		this.grade = grade;
 	}
 	
