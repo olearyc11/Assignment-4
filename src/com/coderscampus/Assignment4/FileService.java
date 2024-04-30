@@ -24,13 +24,12 @@ public class FileService {
 				String[] lineData = line.split(",");
 				int studentID = Integer.parseInt(lineData[0]);
 				String name = lineData[1];
-				String coureName = lineData[2];
+				String courseName = lineData[2];
 				int grade = Integer.parseInt(lineData[3]);
-				Student student = new Student(studentID, name, coureName, grade);
+				Student student = new Student(studentID, name, courseName, grade);
 				students[counter] = student;
 				counter++;
 			}
-
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

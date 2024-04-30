@@ -10,8 +10,8 @@ public class StudentReportService {
 		this.studentService = studentService;
 	}
 	
-	public void generateCourseStudentsReport(String courseKey, String reportFilename) {
+	public void generateCourseStudentsReport(String courseKey, String fileName) {
 		Student[] courseStudents = studentService.filterStudentsByCourse(courseKey);
-		fileService.writeStudentsFromFile(courseStudents, reportFilename);
+		fileService.writeStudentsFromFile(courseStudents, fileName);
 	}
 }
